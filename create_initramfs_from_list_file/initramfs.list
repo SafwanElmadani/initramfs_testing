@@ -1,0 +1,26 @@
+# directory structure
+dir /proc       755 0 0
+dir /usr        755 0 0
+dir /bin        755 0 0
+dir /sys        755 0 0
+dir /var        755 0 0
+dir /lib        755 0 0
+dir /sbin       755 0 0
+#dir /lib64      755 0 0
+#dir /lib32      755 0 0
+dir /mnt        755 0 0
+dir /mnt/root   755 0 0
+dir /etc        755 0 0
+dir /root       700 0 0
+dir /dev        755 0 0
+dir /tmp        755 0 0
+
+file /bin/busybox /home/safwan/initramfs_testing/create_initramfs_from_list_file/needed_packages/busybox 755 0 0
+
+slink /bin/mount busybox 755 0 0
+slink /bin/sh busybox 755 0 0
+slink /bin/pwd busybox 755 0 0
+slink /bin/ls busybox 755 0 0
+
+file /etc/inittab /home/safwan/initramfs_testing/create_initramfs_from_list_file/inittab  744 0 0
+slink /init /bin/busybox 755 0 0

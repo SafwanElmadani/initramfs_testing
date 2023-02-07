@@ -1,0 +1,8 @@
+
+
+::wait:/bin/mount -t devtmpfs  devtmpfs  /dev
+::wait:/bin/mount -t proc      proc      /proc
+::wait:/bin/mount -t sysfs     sysfs     /sys
+::wait:/bin/mount -t tmpfs     tmpfs     /tmp
+
+::askfirst:-/bin/sh
